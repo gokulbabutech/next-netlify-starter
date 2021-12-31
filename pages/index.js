@@ -1,23 +1,22 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Layout from "../components/Layout";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Feature from '../components/Feature';
+import Service from '../components/Service';
+import About from '../components/About';
+import Footer from '../components/Footer';
 
-export default function Home() {
+const Index = () => {
   return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
-
+    <Layout pageTitle="Landing Page Nextjs">
+      <Header />
+      <Hero />
+      <Feature/>
+      <Service />
+      <About />
       <Footer />
-    </div>
+    </Layout>
   )
 }
+
+export default Index;
